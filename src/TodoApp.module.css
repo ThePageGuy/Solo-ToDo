@@ -3,46 +3,50 @@
     margin: 0 auto;
     padding: 20px;
     text-align: center;
-  }
-  
-  .form {
-    display: flex;
-    margin-bottom: 20px;
-  }
-  
-  .input {
-    flex-grow: 1;
-    padding: 8px;
-    font-size: 16px;
-  }
-  
-  .button {
-    padding: 8px 16px;
-    font-size: 16px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .list {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px;
-    background-color: #f4f4f4;
-    margin-bottom: 8px;
-  }
-  
-  .removeButton {
-    background-color: #ff4d4d;
-    color: #fff;
-    border: none;
-    padding: 4px 8px;
-    cursor: pointer;
-  }
+}
+
+.form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.input {
+  flex-grow: 1;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.button {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background-color: #f4f4f4;
+  margin-bottom: 8px;
+}
+
+.removeButton {
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.checkbox {
+  margin-right: 8px;
+}

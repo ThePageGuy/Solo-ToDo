@@ -19,6 +19,12 @@ const TodoItem = ({ todo, removeTodo, index, updateTodo }) => {
     setEditValue(todo);
   };
 
+  const [isCompleted, setIsCompleted] = useState(false);
+
+  const toggleComplete = () => {
+    setIsCompleted(!isCompleted);
+  };
+
   return (
     <li className={styles.item}>
       {isEditing ? (
@@ -38,7 +44,19 @@ const TodoItem = ({ todo, removeTodo, index, updateTodo }) => {
         </div>
       ) : (
         <div>
-          <span>{todo}</span>
+          <input
+            type="checkbox"
+            checked={isCompleted}
+            onChange={toggleComplete}
+            className={styles.checkbox}
+          />
+          <span
+            style={{
+              textDecoration: isCompleted ? 'line-through' : 'none',
+            }}
+          >
+            {todo}
+          </span>
           <button onClick={handleEditClick} className={styles.button}>
             Edit
           </button>
