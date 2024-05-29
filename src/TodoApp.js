@@ -9,11 +9,15 @@ const TodoApp = () => {
     setTodos([...todos, todo]);
   };
 
+  const removeTodo = (index) => {
+    setTodos(todos.filter((_, i) => i !== index));
+  };
+
   return (
     <div>
       <h1>Todo App</h1>
       <TodoForm addTodo={addTodo} />
-      <TodoList todos={todos} />
+      <TodoList todos={todos} removeTodo={removeTodo} />
     </div>
   );
 };
