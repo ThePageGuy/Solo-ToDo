@@ -2,7 +2,7 @@ import React from 'react';
 import TodoItem from './TodoItem';
 import styles from './TodoApp.module.css';
 
-const TodoList = ({ todos, removeTodo }) => {
+const TodoList = ({ todos, removeTodo, updateTodo }) => {
   return (
     <ul className={styles.list}>
       {todos.map((todo, index) => (
