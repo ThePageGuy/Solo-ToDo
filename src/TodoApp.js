@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import TodoForm from './TodoForm';
 import TodoList from './TodoList';
 import styles from './TodoApp.module.css';
@@ -17,6 +17,15 @@ const TodoApp = () => {
   const removeTodo = (index) => {
     setTodos(todos.filter((_, i) => i !== index));
   };
+
+  useEffect(() => {
+    const storedTodos = JSON.parse(localStorage.getItem('todos')) || [];
+    setTodos(storedTodos);
+  }, []);
+  
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
 
   return (
     <div className={styles.container}>
