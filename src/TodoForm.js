@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
 
-const TodoForm = () => {
+const TodoForm = ({ addTodo }) => {
   const [inputValue, setInputValue] = useState('');
 
-  // Event handlers and form submission logic will go here
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (inputValue.trim()) {
+      addTodo(inputValue);
+      setInputValue('');
+    }
+  };
 
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <input
         type="text"
         value={inputValue}
