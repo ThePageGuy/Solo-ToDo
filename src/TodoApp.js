@@ -10,6 +10,10 @@ const TodoApp = () => {
     setTodos([...todos, todo]);
   };
 
+  const updateTodo = (index, newValue) => {
+    setTodos(todos.map((todo, i) => (i === index ? newValue : todo)));
+  };
+
   const removeTodo = (index) => {
     setTodos(todos.filter((_, i) => i !== index));
   };
@@ -18,7 +22,7 @@ const TodoApp = () => {
     <div className={styles.container}>
       <h1>Todo App</h1>
       <TodoForm addTodo={addTodo} />
-      <TodoList todos={todos} removeTodo={removeTodo} />
+      <TodoList todos={todos} removeTodo={removeTodo} updateTodo={updateTodo} />
     </div>
   );
 };

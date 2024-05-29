@@ -11,6 +11,7 @@ const TodoList = ({ todos, removeTodo }) => {
           todo={todo}
           removeTodo={removeTodo}
           index={index}
+          updateTodo={updateTodo}
         />
       ))}
     </ul>
