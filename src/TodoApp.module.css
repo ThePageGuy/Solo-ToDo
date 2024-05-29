@@ -1,8 +1,8 @@
 .container {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
 }
 
 .form {
@@ -39,12 +39,29 @@
   margin-bottom: 8px;
 }
 
-.removeButton {
+.itemContent {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.itemActions {
+  display: flex;
+}
+
+.removeButton,
+.editButton {
+  height: 30px; /* Set the same height for both buttons */
   background-color: #ff4d4d;
   color: #fff;
   border: none;
   padding: 4px 8px;
   cursor: pointer;
+  margin-left: 8px; /* Add some spacing between the buttons */
+}
+
+.editButton {
+  background-color: #333;
 }
 
 .checkbox {

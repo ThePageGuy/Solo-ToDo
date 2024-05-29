@@ -43,7 +43,7 @@ const TodoItem = ({ todo, removeTodo, index, updateTodo }) => {
           </button>
         </div>
       ) : (
-        <div>
+        <div className={styles.itemContent}>
           <input
             type="checkbox"
             checked={isCompleted}
@@ -57,15 +57,17 @@ const TodoItem = ({ todo, removeTodo, index, updateTodo }) => {
           >
             {todo}
           </span>
-          <button onClick={handleEditClick} className={styles.button}>
-            Edit
-          </button>
-          <button
-            onClick={() => removeTodo(index)}
-            className={styles.removeButton}
-          >
-            Remove
-          </button>
+          <div className={styles.itemActions}>
+            <button onClick={handleEditClick} className={styles.editButton}>
+              Edit
+            </button>
+            <button
+              onClick={() => removeTodo(index)}
+              className={styles.removeButton}
+            >
+              Remove
+            </button>
+          </div>
         </div>
       )}
     </li>
