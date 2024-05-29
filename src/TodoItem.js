@@ -51,9 +51,9 @@ const TodoItem = ({ todo, removeTodo, index, updateTodo }) => {
             className={styles.checkbox}
           />
           <span
-            style={{
-              textDecoration: isCompleted ? 'line-through' : 'none',
-            }}
+            className={`${styles.todoText} ${
+              isCompleted ? styles.completed : ''
+            }`}
           >
             {todo}
           </span>
